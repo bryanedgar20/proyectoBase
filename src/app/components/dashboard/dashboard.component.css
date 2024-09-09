@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    display: grid !important;
+    text-align: left !important;
+  }
+  
+  .container {
+    display: flex;
+    height: calc(100vh - 60px); /* Ajustar altura para incluir el footer */
+  }
+  
+  .sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .filter {
+    margin-bottom: 20px;
+  }
+  

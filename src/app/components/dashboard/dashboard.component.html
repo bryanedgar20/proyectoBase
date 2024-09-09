@@ -1,0 +1,90 @@
+<!-- Header -->
+<p-menubar [model]="items">
+  <div class="header-title">Monitor de Búsqueda</div>
+</p-menubar>
+
+<div class="container">
+  <!-- Sidebar con filtros -->
+  <div class="sidebar">
+    <p-panel header="Filtros de Búsqueda">
+      <div class="filter">
+        <label for="name">Nombre:</label>
+        <input id="name" [(ngModel)]="pedido.descripcionPedido" pInputText type="text" placeholder="Buscar por nombre" />
+      </div>
+      <div class="filter">
+        <label for="name">estado:</label>
+        <input id="name" [(ngModel)]="pedido.estado" pInputText type="text" placeholder="Buscar por nombre" />
+      </div>
+      <div class="filter">
+        <label for="status">Estado:</label>
+        <p-dropdown [options]="statuses" [(ngModel)]="selectedStatus" placeholder="Seleccione estado"></p-dropdown>
+      </div>
+      <div class="filter">
+        <label for="date">Fecha:</label>
+        <p-calendar [(ngModel)]="selectedDate" [showIcon]="true" inputId="icon"></p-calendar>
+      </div>
+      
+      <button pButton type="button" label="Buscar" (click)="onSearch()"></button>
+    </p-panel>
+  </div>
+
+  <!-- Tabla de resultados -->
+  <div class="content">
+    <p-table [value]="results">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Nombre</th>
+          <th>Estado</th>
+          <th>Fecha</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-result>
+        <tr>
+          <td>{{ result.descripcionPedido }}</td>
+          <td>{{ result.estado }}</td>
+          <td>{{ result.fechaPedido | date: 'dd/MM/yyyy' }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+    <p-messages [(value)]="msgs"></p-messages>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+  © 2024 Monitor de Búsqueda - Todos los derechos reservados
+</footer>
+
+
+
+<!-- <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-secondary">Incio</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Caracteristicas</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Precio</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Nosotros</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <button type="button" (click)="logOut()" class="btn btn-outline-primary me-2">LogOut</button>
+      </div>
+    </header>
+    <section *ngIf="auth.user$ | async as user" class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+              <img [src]="user.picture" alt="" class="img-thumbnail" height="50px">
+              <p>{{ user.given_name }}</p>
+              <p>{{ user.family_name }}</p>
+              <p>{{ user.email }}</p>
+            <p class="lead text-muted"> {{ user | json }}</p>
+          </div>
+        </div>
+      </section>
+  </div> -->

@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .app-container {
+    height: 100vh; /* Ocupa toda la altura de la ventana del navegador */
+    display: flex;
+    flex-direction: column;
+  }
+  

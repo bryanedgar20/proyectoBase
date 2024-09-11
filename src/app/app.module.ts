@@ -22,13 +22,15 @@ import {FieldsetModule} from 'primeng/fieldset';
 import { FormsModule } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { PageOneComponent } from './components/page-one/page-one.component';
+import { PanelGenericoComponent } from './components/panel-generico/panel-generico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     DashboardComponent,
-    PageOneComponent
+    PageOneComponent,
+    PanelGenericoComponent
   ],
   imports: [
     BrowserModule,

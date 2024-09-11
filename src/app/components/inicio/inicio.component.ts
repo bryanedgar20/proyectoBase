@@ -13,6 +13,7 @@ export class InicioComponent implements OnInit {
 
   ngOnInit(): void {
     this.auth.isAuthenticated$.subscribe(isAuthenticaed => {
+      console.log('INGRESA A VERIFICAR SI INICIO SESION', isAuthenticaed)
       if(isAuthenticaed) {
         this.router.navigate(['/dashboard'])
       }

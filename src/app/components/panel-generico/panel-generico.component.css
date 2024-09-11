@@ -1,0 +1,57 @@
+header {
+    background-color: #f8f9fa; /* Color de fondo del header */
+    padding: 5px 20px; /* Reduce el padding para menor altura */
+    height: 25px; /* Define una altura fija */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e7e7e7; /* Línea de separación inferior */
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+    font-weight: bold;
+  }
+  
+  .logout-button {
+    background: none;
+    border: none;
+    color: #007bff; /* Color del ícono */
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logout-button i {
+    margin-right: 5px; /* Espacio entre ícono y texto */
+  }
+  
+  .logout-button:hover {
+    color: #0056b3; /* Color al pasar el mouse sobre el botón */
+  }
+
+  .logout-button i {
+    font-size: 1rem; /* Ajusta el tamaño del ícono */
+    margin-right: 5px; /* Espacio entre ícono y texto */
+  }
+  
+  
+  
+
+.footer {
+    text-align: left;
+    /* padding: 10px; */
+    background-color: #f8f9fa;
+    position: fixed;
+    bottom: 0;
+    height: 25px; /* Define una altura fija */
+    width: 100%;
+}

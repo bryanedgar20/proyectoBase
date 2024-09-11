@@ -1,0 +1,17 @@
+<header>
+      <span class="logo">Mi Aplicación</span>
+      <button class="logout-button" (click)="logOut()">
+        <i class="fas fa-sign-out-alt"></i>Salir
+      </button>
+</header>
+  
+
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+    <div *ngIf="auth.user$ | async as user">
+              <b>&nbsp; &nbsp; Usuario: {{ user.email }}</b>
+      </div>
+</footer>
